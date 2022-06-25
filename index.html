@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Image recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script> -->
+  <!-- <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script> -->
+  <script src="https://teachablemachine.withgoogle.com/models/RLS8S2W-T/"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>FACE RECOGNITION WEBSITE</h1>
+      <p style="font-size: medium;">Model is trained to identify:</p>
+      <button type="button"  style="width: 100%; margin: 12px 12px 12px; font-size: larger; text-align: left;" class="btn btn-primary">Father</button>
+      <button type="button" style="width: 100%; font-size: larger; text-align: left; margin: 12px 12px;" class="btn btn-primary">Mother</button>
+      <button type="button"  style="width: 100%; margin: 12px 12px 12px; font-size: larger; text-align: left;" class="btn btn-primary">Brother</button>
+      <button type="button"  style="width: 100%; margin: 12px 12px 12px; font-size: larger; text-align: left;" class="btn btn-primary">Myself</button>
+
+    <label>Webcam View - </label>
+      <div id="camera"></div>
+      <br /><br />
+      <div id="result"></div>
+      <br /><br />
+      <a onclick="take_snapshot();" style="--clr:#1e9bff" class="btn btn-info"> <span>Capture Image</span> </a>
+      <br /><br />
+      <a onclick="check();" class="btn btn-success" style="--clr:#6eff3e"><span>Identify Image</span></a>
+      <br /><br />
+
+      <p style="font-size: 22px">
+        Object : <span id="result_object_name"></span>
+      </p>
+      <p style="font-size: 22px">
+        Accuracy : <span id="result_object_accuracy"></span>
+      </p>
+    </div>
+  </body>
+
+  <script src="main.js"></script>
+</html>
